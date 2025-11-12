@@ -79,6 +79,18 @@ try:
         for i in range(shape_num):
             shape = Polygon(4, 2)
             shape.draw()
+    elif choice == 7:
+        for i in range(shape_num):
+            shape = Polygon(5, 2)
+            shape.draw()
+    elif choice == 8:
+        for i in range(shape_num):
+            shape = Polygon(random.randint(3, 5), 2)
+            shape.draw()
+    elif choice == 9:
+        for i in range(shape_num):
+            shape = Polygon(random.randint(3, 5), random.randint(0, 1) * 2)
+            shape.draw()
     else:
         raise ValueError
 except:
