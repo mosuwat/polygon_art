@@ -54,20 +54,30 @@ turtle.colormode(255)
 choice = input("Which art do you want to generate? Enter a number between 1 to 9 inclusive: ")
 try:
     choice = int(choice)
+    shape_num = 30
     if choice == 1:
-        shape_num = random.randint(15, 25)
         for i in range(shape_num):
             shape = Polygon(3, 0)
             shape.draw()
     elif choice == 2:
-        shape_num = random.randint(15, 25)
         for i in range(shape_num):
             shape = Polygon(4, 0)
             shape.draw()
     elif choice == 3:
-        shape_num = random.randint(15, 25)
         for i in range(shape_num):
             shape = Polygon(5, 0)
+            shape.draw()
+    elif choice == 4:
+        for i in range(shape_num):
+            shape = Polygon(random.randint(3, 5), 0)
+            shape.draw()
+    elif choice == 5:
+        for i in range(shape_num):
+            shape = Polygon(3, 2)
+            shape.draw()
+    elif choice == 6:
+        for i in range(shape_num):
+            shape = Polygon(4, 2)
             shape.draw()
     else:
         raise ValueError
