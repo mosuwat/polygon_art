@@ -51,9 +51,27 @@ turtle.bgcolor('black')
 turtle.tracer(0)
 turtle.colormode(255)
 
-shape1 = Polygon(3, 0)
-shape1.draw()
-shape2 = Polygon(5, 2)
-shape2.draw()
+choice = input("Which art do you want to generate? Enter a number between 1 to 9 inclusive: ")
+try:
+    choice = int(choice)
+    if choice == 1:
+        shape_num = random.randint(15, 25)
+        for i in range(shape_num):
+            shape = Polygon(3, 0)
+            shape.draw()
+    elif choice == 2:
+        shape_num = random.randint(15, 25)
+        for i in range(shape_num):
+            shape = Polygon(4, 0)
+            shape.draw()
+    elif choice == 3:
+        shape_num = random.randint(15, 25)
+        for i in range(shape_num):
+            shape = Polygon(5, 0)
+            shape.draw()
+    else:
+        raise ValueError
+except:
+    print("Please choose an integer between 1-9!")
 
 turtle.done()
